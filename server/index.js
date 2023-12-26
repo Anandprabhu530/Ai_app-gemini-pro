@@ -21,6 +21,7 @@ const generationConfig = {
 app.get("/chat", (req, res) => {
   res.send("data");
 });
+
 app.post("/chat", async (req, res) => {
   const data = req.body;
   generationConfig.temperature = data.temperature;
