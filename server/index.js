@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
