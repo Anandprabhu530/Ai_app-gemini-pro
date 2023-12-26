@@ -11,13 +11,16 @@ app.use(express.urlencoded({ extended: true }));
 const genAI = new GoogleGenerativeAI(process.env.GEN_API);
 
 const generationConfig = {
-  stopSequences: ["red"],
+  stopSequences: [],
   maxOutputTokens: 200,
   temperature: 0,
   topP: 0.1,
   topK: 16,
 };
 
+app.get("/chat", (req, res) => {
+  res.send("data");
+});
 app.post("/chat", async (req, res) => {
   const data = req.body;
   generationConfig.temperature = data.temperature;
