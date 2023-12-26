@@ -12,7 +12,7 @@ const Inputbar = () => {
     e.preventDefault();
     if (!input) return;
     setisLoading(true);
-    const response = await fetch("https://ai-app-gemini-pro.vercel.app/chat", {
+    const response = await fetch("/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
