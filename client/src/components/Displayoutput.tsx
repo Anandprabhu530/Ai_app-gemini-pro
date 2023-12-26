@@ -3,7 +3,7 @@ import { parseddata } from "../store/storereducer";
 import ReactMarkdown from "react-markdown";
 
 const Displayoutput = () => {
-  const data = useSelector((state) => state);
+  const data = useSelector((state: []) => state);
   return (
     <div>
       <div className="flex lg:py-6 overflow-auto justify-self-stretch">
