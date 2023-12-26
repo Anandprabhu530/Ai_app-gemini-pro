@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/chat': {
-        target: 'http://localhost:8080',
+        target: 'https://ai-app-gemini-pro.vercel.app/',
         changeOrigin: true,
       }
     }
